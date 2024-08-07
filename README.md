@@ -17,7 +17,7 @@ apt install wget
 ```bash
 wget https://raw.githubusercontent.com/0xtnpxsgt/Allora-Worker-Chronos-Model/main/allora-model.sh && chmod +x allora-model.sh && ./allora-model.sh
 ```
-- In the middle of the command execution, it will ask for keyring phrase, Here you need write a password (example : 12345678)
+- In the middle of the command execution, it will ask for keyring phrase, Here you need write a password (пишем тот же пароль что и прежде)
 - During pasting `HEAD_ID` , Don't use `Ctrl+C` to copy and `Ctrl+V` to paste, instead just select the whole `KEY_ID` and Press Right Click
 
 - Once Done Proceed to Step 4
@@ -33,8 +33,8 @@ cat head-data/keys/identity
 ```
 
 ## Step 5: Edit App.py
-- Register on Coingecko https://www.coingecko.com/en/developers/dashboard & Create Demo API KEY
 - Copy & Replace API with your `COINGECKO API` , then save `Ctrl+X Y ENTER`.
+- Тут я уже сам вставил COINHECKO API поэтому ничего менять не нужно
 ```bash
 sudo rm -rf app.py && sudo nano app.py
 ```
@@ -195,6 +195,7 @@ CMD ["gunicorn", "--conf", "/app/gunicorn_conf.py", "main:app"]
 
 ## Step 9: Edit docker-compose.yml
 - Copy & Replace `HEAD-ID`  `WALLETSEEDPHRASE` Worker1 - Worker2
+- Меняем сид фразы и head IDs для обоих воркеров в одном файле (просто вставляем два раза данные из таблицы)
 ```bash
 rm -rf docker-compose.yml && nano docker-compose.yml
 ```
@@ -400,13 +401,12 @@ wget -O checkyourworker.sh https://raw.githubusercontent.com/casual1st/allorawor
 chmod +x checkyourworker.sh
 ./checkyourworker.sh
 ```
+Для проверки первого вворкера вводи allora-topic-5-worker, а для второго - allora-topic-6-worker
 
 #### Run Checker
 ```bash
 ./checkyourworker.sh
 ```
-
-#### HAVING PROBLEM WITH THE SETUP? JOIN US HERE: https://discord.gg/r6PPSjRZec | help is on the way! :D
 
 
 - Rerefence
