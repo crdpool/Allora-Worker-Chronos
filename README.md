@@ -383,13 +383,13 @@ docker ps
 #### Check your node status
 ```bash
 # Check worker 2 logs
-docker compose logs -f worker-2
+docker logs -f worker-2
 
 # Check worker 1 logs
-docker compose logs -f worker-1
+docker logs -f worker-1
 
 # Check worker infernence - result 200 means- success.
-docker compose logs -f inference
+docker logs -f inference
 ```
 #### Check your worker logs and test the inferences using curl
 
