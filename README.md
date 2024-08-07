@@ -1,8 +1,6 @@
 # Allora-2 Worker-Chronos-Model
 
 
-
-### Deployment - Read Carefully! 
 ## Step 1: 
 ```bash
 rm -rf allora-model.sh allora-chain/ basic-coin-prediction-node/
